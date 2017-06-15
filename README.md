@@ -1,2 +1,2 @@
-# Descripción del proyecto
+# Insta Collage
 ** Proyecto **
