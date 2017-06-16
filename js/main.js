@@ -3,44 +3,26 @@ var elemento = document.getElementsByClassName("go")[0];
 elemento.addEventListener("click", validacion);
 
 function validacion() {
-    //alert("funciona");
-    // validaciones en contenedores 
-    var letras = /^[A-Za-z]*$/; /*/^[a-zA-Z ]*$/;/^[0-9]$/*/
-    var correo = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     // datos desde formulario
     var nombre = document.getElementById("exampleInputName2").value;
     var password = document.getElementById("exampleInputEmail2").value;
-    var resnom = " ";
-    var respass = " ";
 
-    if (nombre == null || nombre.length == 0) {
+
+    if (nombre == null || nombre.length == 0 || nombre === " " || password == null || password.length == 0 || password === " ") {
         console.log(nombre + " Esta vacio");
-    } else {
-        console.log(nombre + " Valido");
-        resnom = "valido";
-        alert("resnom");
-    }
-
-    if (password == null || password.length == 0) {
-        console.log(password + " Esta vacio");
-    } else if (password < 6 ||  password == "123456") {
+        alert("No puedes dejar campos vacios");
+    } 
+    if (password !== " ") {
+        if (password.length < 6 ||  password === "123456") {
         console.log(password + " es una de las limitantes del ejercicio");
-    } else {
-        console.log(password + " Valido");
-        respass = "valido";
-        alert("respass");
+        alert("Debes escoger otra contraseña");
+    	}
     }
-
-    if (resnom == "valido" || respass == "valido") {
-    // ruta actual
-    var partes = window.location.href.split("/");
-    partes[partes.length - 1] = "instagram.html";
-    window.location.href = partes.join("/");
-    console.log(partes);
-    alert("resulto");
-   	}
+    if (!(nombre == null || nombre.length == 0 || nombre === " " || password == null || password.length == 0 || password === " ") && !(password.length < 6 ||  password === "123456")) {
+ 		//
+ 		window.location.href = "instagram.html";
+    }
 };
-
 //instagram.html
 function drag(evento){
 	evento.dataTransfer.setData("text", evento.target.id);
