@@ -19,7 +19,7 @@ function validacion() {
     	}
     }
     if (!(nombre == null || nombre.length == 0 || nombre === " " || password == null || password.length == 0 || password === " ") && !(password.length < 6 ||  password === "123456")) {
- 		//
+ 		// llamado otra pagina
  		window.location.href = "instagram.html";
     }
 };
