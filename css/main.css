@@ -138,6 +138,10 @@ body {
 	height: 300px;
 	overflow: hidden;
 }
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
 .collage {
 	background-color: white;
 }
