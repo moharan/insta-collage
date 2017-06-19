@@ -10,10 +10,10 @@ body {
 	font-size: 10px;
 	background-color: #333;
 }
-.container {
+/*.container {
 	margin-right: -15px;
 	margin-left: -15px;
-}
+}*/
 /*index.html*/
 .inicio {
 	height: 100vh;
@@ -44,8 +44,14 @@ body {
     margin: 0 auto;
     height: 45px;
     background-color: #fff;
-    opacity: 0.3;  
+    opacity: 0.3;
 }
+/*.form-inline .form-control[placeholder]{      
+	color: #000;
+}
+.form-inline: .form-control:placeholder {
+	color: #000;
+}*/
 .nuevo {
 	width: 80%;
     color: whitesmoke;
